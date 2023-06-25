@@ -219,7 +219,7 @@ int* ELAHC(int** perm, int* weight, int beginWith, int Lh, double timeCutoff, do
 			id2 = randomInt(0, n);
 		swap(nxt[id1], nxt[id2]);
 
-		//double nxtCost = eval(perm, nxt);
+		//double nxtCost = eval(perm, nxt); /*represents the value of the current solution*/
 		double nxtCost = curCost + costDelta(perm, nxt, id1, id2);
 
 		if (fabs(nxtCost - curCost) < 1e-7 || nxtCost < maxF) {
@@ -256,7 +256,7 @@ int* ELAHC(int** perm, int* weight, int beginWith, int Lh, double timeCutoff, do
 	if (cur) delete cur;
 	delete f;
 	delete nxt;
-	return best;
+	return best; /*represents the value of the best solution*/
 }
 
 double test_ELAHC(char* INPUT, int Lh, double timeCutoff) {
