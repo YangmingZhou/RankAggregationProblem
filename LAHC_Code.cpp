@@ -191,7 +191,7 @@ int* LAHC(int** perm, int* weight, int beginWith, int Lh, double timeCutoff, dou
 			swap(cur[id1], cur[id2]);
 			if (curCost < bestCost) {
 				bestCost = curCost;
-				best = cur;
+				memcpy(best, cur, n * sizeof(int));
 				prevUpdTime = clock();
 			}
 		}
