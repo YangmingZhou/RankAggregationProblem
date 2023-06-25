@@ -17,14 +17,14 @@ int randomInt(int leftBound, int rightBound) {
     return leftBound + int((rightBound - leftBound) * (0.999999 * rand() / RAND_MAX));
 }
 
-const int MAXM = 128, MAXN = 256; // ÅÅÁĞ¸öÊıÓëÅÅÁĞ³¤¶È
+const int MAXM = 128, MAXN = 256; // æ’åˆ—ä¸ªæ•°ä¸æ’åˆ—é•¿åº¦
 int n, m;
 
 /*
- * borda count ÅÅÁĞ¾ÛºÏ
- * @param perm: m¸ö³¤¶ÈÎªnµÄÅÅÁĞ
- * @param weight: n¸öÎ»ÖÃµÄÈ¨ÖØ
- * @return ¾ÛºÏºóµÄÅÅÁĞ
+ * borda count æ’åˆ—èšåˆ
+ * @param perm: mä¸ªé•¿åº¦ä¸ºnçš„æ’åˆ—
+ * @param weight: nä¸ªä½ç½®çš„æƒé‡
+ * @return èšåˆåçš„æ’åˆ—
  */
 
 int* borda(int** perm, int* weight) {
@@ -41,11 +41,11 @@ int* borda(int** perm, int* weight) {
 }
 
 /*
- * ¹é²¢ÅÅĞòÇóÄæĞò¶Ô¸öÊı
- * @param v: ´ıÅÅĞòÊı×é
- * @param L: ÅÅĞòÇø¼ä×ó¶Ëµã
- * @param R: ÅÅĞòÇø¼äÓÒ¶Ëµã
- * @return ÄæĞò¶Ô¸öÊı
+ * å½’å¹¶æ’åºæ±‚é€†åºå¯¹ä¸ªæ•°
+ * @param v: å¾…æ’åºæ•°ç»„
+ * @param L: æ’åºåŒºé—´å·¦ç«¯ç‚¹
+ * @param R: æ’åºåŒºé—´å³ç«¯ç‚¹
+ * @return é€†åºå¯¹ä¸ªæ•°
  */
 
 int rev_order_pair(int* v, int L, int R) {
@@ -75,10 +75,10 @@ int rev_order_pair(int* v, int L, int R) {
 }
 
 /*
- * ÇóÁ½¸öÅÅÁĞµÄtau¾àÀë
- * @param perm1: ÅÅÁĞ1
- * @param perm2: ÅÅÁĞ2
- * @return tau¾àÀë
+ * æ±‚ä¸¤ä¸ªæ’åˆ—çš„tauè·ç¦»
+ * @param perm1: æ’åˆ—1
+ * @param perm2: æ’åˆ—2
+ * @return tauè·ç¦»
  */
 
 int tau(int* perm1, int* perm2) {
@@ -119,6 +119,7 @@ int comp(int x, int y) {
 	return 0;
 }
 
+/*Incremental Evaluation Mechanism (IEM)*/
 double costDelta(int** perm, int* nxt, int x, int y) {
 	if (x == y)return 0;
 	int ret = 0;
