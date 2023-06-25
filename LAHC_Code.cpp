@@ -183,7 +183,7 @@ int* LAHC(int** perm, int* weight, int beginWith, int Lh, double timeCutoff, dou
 		while (id1 == id2)
 			id2 = randomInt(0, n);
 		swap(nxt[id1], nxt[id2]);
-		double nxtCost = eval(perm, nxt);
+		double nxtCost = eval(perm, nxt); // presents the value of the current solution
 		
 		int v = Iter % Lh;
 		if (nxtCost < f[v] || nxtCost <= curCost) {
@@ -200,7 +200,7 @@ int* LAHC(int** perm, int* weight, int beginWith, int Lh, double timeCutoff, dou
 		if (curCost < f[v])
 			f[v] = curCost;
 	}
-	return best;
+	return best; // presents the value of the best solution found
 }
 
 double test_LAHC(char* INPUT, int Lh, double timeCutoff) {
