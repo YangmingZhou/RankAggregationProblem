@@ -11,6 +11,7 @@
 
 # Label Ranking Algorithm
 1. Label Ranking Forest (LRF)
+
 Its code is also available at https://github.com/rebelosa/labelrankingforests
 
 # Label Ranking Data
