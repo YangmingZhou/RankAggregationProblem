@@ -3,7 +3,7 @@
 
 2. Late Acceptance Hill Climbing (LAHC)
 
-3 Enhanced Late Acceptance Hill Climbing (ELAHC)
+3. Enhanced Late Acceptance Hill Climbing (ELAHC)
 
 # Rank Aggregation Problem Instances
 1. Realworld Benchmark
@@ -13,7 +13,9 @@
 1. Label Ranking Forest
 
 # Label Ranking Data
-1.16 semi-synthetic datasets
-2.5 real-world datasets
+1. 16 semi-synthetic datasets
+
+2. 5 real-world datasets
+
 They are also available at https://en.cs.uni-paderborn.de/de/is/research/research-projects/software/label-ranking-datasets
 #
