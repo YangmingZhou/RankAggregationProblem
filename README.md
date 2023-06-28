@@ -1,4 +1,4 @@
-If you have any problem running the algorithm, please do not hesitate to contact us via the email: yangming.zhou@sjtu.edu.cn
+If you have any problem running the algorithm, please do not hesitate to contact us via email: yangming.zhou@sjtu.edu.cn
 
 # Rank Aggregation Algorithms
 1. Hybrid Evolutionary Ranking (HER)
@@ -14,5 +14,5 @@ If you have any problem running the algorithm, please do not hesitate to contact
 1. Late Acceptance Hill Climbing (LAHC)
 2. Enhanced Late Acceptance Hill Climbing (ELAHC)
 
-# Data used in Section 6.1
+# Instances used in Section 6.1
 10 instances selected from different categories
