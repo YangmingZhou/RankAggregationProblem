@@ -1,3 +1,5 @@
+If you have any problem running the algorithm, please do not hesitate to contact us via the email: yangming.zhou@sjtu.edu.cn
+
 # Rank Aggregation Algorithms
 1. Hybrid Evolutionary Ranking (HER)
 
@@ -8,7 +10,7 @@
 2. Synthetic Benchmark
 
 
-# Algorithms used in Section 6.1
+# Algorithms used in Section 6.1 (ELAHC and LAHC)
 1. Late Acceptance Hill Climbing (LAHC)
 2. Enhanced Late Acceptance Hill Climbing (ELAHC)
 
