@@ -1,23 +1,16 @@
 # Rank Aggregation Algorithms
 1. Hybrid Evolutionary Ranking (HER)
 
-2. Late Acceptance Hill Climbing (LAHC)
-
-3. Enhanced Late Acceptance Hill Climbing (ELAHC)
+2. Enhanced Late Acceptance Hill Climbing (ELAHC)
 
 # Rank Aggregation Problem Instances
 1. Realworld Benchmark
 2. Synthetic Benchmark
 
-# Label Ranking Algorithm
-1. Label Ranking Forest (LRF)
 
-Its code is also available at https://github.com/rebelosa/labelrankingforests
+# Algorithms used in Section 6.1
+1. Late Acceptance Hill Climbing (LAHC)
+2. Enhanced Late Acceptance Hill Climbing (ELAHC)
 
-# Label Ranking Data
-1. 16 semi-synthetic datasets
-
-2. 5 real-world datasets
-
-They are also available at https://en.cs.uni-paderborn.de/de/is/research/research-projects/software/label-ranking-datasets
-#
+# Data used in Section 6.1
+10 instances selected from different categories
