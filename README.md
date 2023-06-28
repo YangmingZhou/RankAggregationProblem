@@ -5,6 +5,8 @@ If you have any problem running the algorithm, please do not hesitate to contact
 
 2. Enhanced Late Acceptance Hill Climbing (ELAHC)
 
+3. Iterated Local Search (ILS)
+
 # Rank Aggregation Problem Instances
 1. Realworld Benchmark
 2. Synthetic Benchmark
