@@ -335,50 +335,8 @@ void clear_exist(int* perm, int x, int y) {
 	for (int i = x; i <= y; i++)
 		exist[perm[i]] = false;
 }
-int* crossOver_OX1(int* perm1, int* perm2) {
-	int* ret = new int[n];
-	int x = randomInt(0, n), y = randomInt(0, n);
-	while (x == y)
-		y = randomInt(0, n);
-	if (x > y)
-		swap(x, y);
-	mark_exist(perm1, x, y);
-	int id = 0;
-	for (int i = x; i <= y; i++)
-		ret[i] = perm1[i];
-	for (int i = 0; i < n; i++) {
-		if (id == x) id = y + 1;
-		if (!exist[perm2[i]])
-			ret[id++] = perm2[i];
-	}
-	clear_exist(perm1, x, y);
-	return ret;
-}
-int* crossOver_OX2(int* perm1, int* perm2) {
-	int* ret = new int[n];
-	static int tmp[MAXN];
-	static int tmp2[MAXN];
-	for (int i = 0; i < n; i++)
-		tmp[i] = i;
-	random_shuffle(tmp, tmp + n);
-	int cnt = randomInt(1, n);
-	for (int i = 0; i < cnt; i++) {
-		tmp[i] = perm2[tmp[i]];
-		tmp2[i] = perm1[tmp[i]];
-	}
-	sort(tmp, tmp + cnt);
-	mark_exist(tmp2, 0, cnt - 1);
-	for (int i = 0; i < n; i++)
-		ret[i] = perm1[i];
-	int id = 0;
-	for (int i = 0; i < n; i++)
-		if (exist[perm2[i]])
-			ret[tmp[id++]] = perm2[i];
-	clear_exist(tmp2, 0, cnt - 1);
-	return ret;
-}
 
-int* crossOver_POS(int* perm1, int* perm2) {
+int* crossOver_CPSX(int* perm1, int* perm2) {
 	int* ret = new int[n];
 	static int tmp[MAXN];
 	for (int i = 0; i < n; i++)
@@ -435,8 +393,8 @@ int* memetic(int** perm, int* weight, bool beginWithBorda, int Lh, double timeCu
 		//int* offSpring1 = crossOver_OX2(population[id1], population[id2]);
 		//int* offSpring2 = crossOver_OX2(population[id2], population[id1]);
 
-		int* offSpring1 = crossOver_POS(population[id1], population[id2]);
-		int* offSpring2 = crossOver_POS(population[id2], population[id1]);
+		int* offSpring1 = crossOver_CPSX(population[id1], population[id2]);
+		int* offSpring2 = crossOver_CPSX(population[id2], population[id1]);
 
 		if (eval(perm, offSpring1) < eval(perm, offSpring2)) {
 			offSpring = offSpring1;
